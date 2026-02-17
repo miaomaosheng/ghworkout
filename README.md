@@ -3,12 +3,42 @@
 ## Prerequisites
 
 1. **Create a GitHub account** at github.com
-2. **Install Git** on your machine
+
+2. **Install Git** on your machine (macOS):
+   ```bash
+   xcode-select --install
+   ```
+   Verify installation:
+   ```bash
+   git --version
+   ```
+
 3. **Configure Git** with your identity:
    ```bash
    git config --global user.name "Your Name"
    git config --global user.email "your-email@example.com"
    ```
+
+4. **Install Homebrew** (macOS package manager):
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+   Then add it to your PATH:
+   ```bash
+   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+   eval "$(/opt/homebrew/bin/brew shellenv)"
+   ```
+
+5. **Install GitHub CLI**:
+   ```bash
+   brew install gh
+   ```
+
+6. **Authenticate with GitHub**:
+   ```bash
+   gh auth login
+   ```
+   Select GitHub.com → HTTPS → Login with a web browser, then follow the prompts.
 
 ---
 
